@@ -1,0 +1,21 @@
+{
+  "name": "mal-clone",
+  "version": "1.0.0",
+  "description": "Modern MyAnimeList clone",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "libraries/*"
+  ],
+  "scripts": {
+    "dev:api": "npm run dev --workspace=apps/api",
+    "dev:frontend": "npm run dev --workspace=apps/frontend",
+    "test": "node --test",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "keywords": ["anime", "myanimelist", "react", "node"],
+  "author": "Shaiel Montesdeoca Puga",
+  "license": "MIT"
+}
