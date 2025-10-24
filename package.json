@@ -15,7 +15,15 @@
     "lint": "eslint .",
     "format": "prettier --write ."
   },
-  "keywords": ["anime", "myanimelist", "react", "node"],
+  "keywords": [
+    "anime",
+    "myanimelist",
+    "react",
+    "node"
+  ],
   "author": "Shaiel Montesdeoca Puga",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^9.38.0"
+  }
 }
