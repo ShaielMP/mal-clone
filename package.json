@@ -13,7 +13,11 @@
     "dev:frontend": "npm run dev --workspace=apps/frontend",
     "test": "node --test",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "migrate:make": "npm run migrate:make --workspace=apps/api --",
+    "migrate:latest": "npm run migrate:latest --workspace=apps/api",
+    "migrate:rollback": "npm run migrate:rollback --workspace=apps/api",
+    "migrate:status": "npm run migrate:status --workspace=apps/api"
   },
   "keywords": [
     "anime",

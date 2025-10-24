@@ -8,10 +8,10 @@
     "start": "cross-env NODE_ENV=production node server.js",
     "dev": "cross-env NODE_ENV=development nodemon server.js",
     "test": "cross-env NODE_ENV=test node --test tests/**/*.test.js",
-    "migrate:make": "knex migrate:make --knexfile knexfile.js",
-    "migrate:latest": "knex migrate:latest --knexfile knexfile.js",
-    "migrate:rollback": "knex migrate:rollback --knexfile knexfile.js",
-    "migrate:status": "knex migrate:status --knexfile knexfile.js"
+    "migrate:make": "knex migrate:make --knexfile knexfile.cjs",
+    "migrate:latest": "knex migrate:latest --knexfile knexfile.cjs",
+    "migrate:rollback": "knex migrate:rollback --knexfile knexfile.cjs",
+    "migrate:status": "knex migrate:status --knexfile knexfile.cjs"
   },
   "dependencies": {
     "@fastify/cors": "^8.5.0",

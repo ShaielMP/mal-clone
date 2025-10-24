@@ -9,18 +9,13 @@ exports.up = function (knex) {
     table.string('email', 100).notNullable().unique();
     table.string('password_hash', 255).notNullable();
     table.string('avatar_url', 500);
-    table.string('bio');
-    table.string('birthday');
-    table.string('gender', [
-      'male',
-      'female',
-      'non-binary',
-      'prefer-not-to-say'
-    ]);
+    table.text('bio');
+    table.date('birthday');
+    table.enum('gender', ['male', 'female', 'non-binary', 'prefer-not-to-say']);
     table.string('location', 100);
-    table.string('joined_at').defaultTo(knex.fn.now());
-    table.string('last_online').defaultTo(knex.fn.now());
-    table.string('is_active').defaultTo(true);
+    table.timestamp('joined_at').defaultTo(knex.fn.now());
+    table.timestamp('last_online').defaultTo(knex.fn.now());
+    table.boolean('is_active').defaultTo(true);
     table.timestamps(true, true);
 
     table.index('username');

@@ -1,16 +1,14 @@
-import dotenv from 'dotenv';
+require('dotenv').config();
 
-dotenv.config();
-
-export default {
+module.exports = {
   development: {
     client: 'mysql2',
     connection: {
-      host: process.env.DB_HOST,
-      port: process.env.DB_PORT,
-      user: process.env.DB_USER,
-      password: process.env.DB_PASSWORD,
-      database: process.env.DB_NAME,
+      host: process.env.DB_HOST || 'localhost',
+      port: process.env.DB_PORT || '3306',
+      user: process.env.DB_USER || 'shai',
+      password: process.env.DB_PASSWORD || 'mal_shai',
+      database: process.env.DB_NAME || 'mal_clone_db',
       charset: 'utf8mb4'
     },
     migrations: {
@@ -21,7 +19,8 @@ export default {
       directory: './src/data-access/seeds'
     }
   },
-  porduction: {
+
+  production: {
     client: 'mysql2',
     connection: {
       host: process.env.DB_HOST,
