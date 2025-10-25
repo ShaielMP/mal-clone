@@ -4,7 +4,7 @@ services:
     container_name: mal-clone-db
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_ROOT_PASSWORD: mal_shai
       MYSQL_DATABASE: mal_clone_db
       MYSQL_USER: shai
       MYSQL_PASSWORD: mal_shai

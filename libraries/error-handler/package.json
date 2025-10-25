@@ -1,0 +1,10 @@
+{
+  "name": "@mal-clone/error-handler",
+  "version": "1.0.0",
+  "description": "Centralized error handling",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  }
+}
